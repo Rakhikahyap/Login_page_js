@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+    <style type="text/css">
+        div{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 0 auto;
+            padding: 120px;
+            box-sizing: border-box;
+            background-color: rgb(58, 172, 180);
+        }
+    </style>
+
+<body>
+    <center><h1>Welcome to Login page</h1></center>
+    <hr>
+    <div>
+        username:<br>
+        <input type="text" name="text" id="username">
+        <br><br>
+
+        password:<br>
+        <input type="password" name="text" id="password">
+        <br><br>
+
+        <button onclick="login()">submit</button>
+
+    </div>
+<script type="text/javascript">
+    function login()
+    {
+        var name = prompt("Conform UserName.");
+        var pass1 = prompt("Conform Password.")
+        var uname=document.getElementById('username').value;
+        var pass=document.getElementById('password').value;
+
+        if(uname==name && pass==pass1)
+        {
+            location.assign("login.html")
+        }
+        else
+        {
+            window.alert("login failed");
+        }
+    }
+</script>
+
+</body>
+</html>
